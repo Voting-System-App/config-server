@@ -6,7 +6,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/NttData-Project/config-server.git
+          uri: https://github.com/Voting-System-App/config-server.git
           searchPaths: config-data
           default-label: "main"
         bootstrap: true
