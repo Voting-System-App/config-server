@@ -8,4 +8,4 @@ spring:
         - id: politicalPartyModule
           uri:  http://177.71.157.239/
           predicates:
-            - Path=/party/**
+            - Path=/**
