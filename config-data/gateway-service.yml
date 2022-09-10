@@ -4,24 +4,14 @@ server:
     include-message: always
     include-binding-errors: always
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-
 spring:
   cloud:
     gateway:
       routes:
-        - id: product-service
-          uri: lb://product-service
+        - id: party-service
+          uri: http://177.71.157.239
           predicates:
-            - Path=/api/product/**
+            - Path=/party/**
           filters:
-            - StripPrefix=2
-        - id: user-service
-          uri: lb://user-service
-          predicates:
-            - Path=/api/user/**
-          filters:
-            - StripPrefix=2
+            - StripPrefix=1
+      
