@@ -9,3 +9,7 @@ spring:
           uri:  http://177.71.157.239/
           predicates:
             - Path=/**
+        - id: userModule
+          uri: http://18.231.72.108/
+          predicates:
+            - Path=/**
