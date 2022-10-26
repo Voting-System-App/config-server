@@ -5,11 +5,33 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: politicalPartyModule
-          uri:  http://177.71.157.239/
+        #user vote microservice ip
+        - id: voterModule
+          uri: http://18.231.148.123
           predicates:
-            - Path=/**
+            - Path=/voter/**
+        #user microservice ip
         - id: userModule
-          uri: http://18.231.72.108/
+          uri: http://18.231.148.123
           predicates:
-            - Path=/**
+            - Path=/user/**
+        #user microservice ip
+        - id: managerModule
+          uri: http://18.231.148.123
+          predicates:
+            - Path=/manager/**
+        #political partu microservice ip
+        - id: partyModule
+          uri: http://18.231.31.135
+          predicates:
+            - Path=/party/**
+        #political partu microservice ip
+        - id: candidateModule
+          uri: http://18.231.31.135
+          predicates:
+            - Path=/candidate/**
+        #dependency microservice ip
+        - id: s3Module
+          uri: http://18.228.206.60
+          predicates:
+            - Path=/s3/**
